@@ -1,0 +1,7 @@
+tensorflow>=2.10.0
+websockets>=10.0
+numpy>=1.21.0
+asyncio
+json
+datetime
+os
