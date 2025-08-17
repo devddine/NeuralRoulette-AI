@@ -95,9 +95,9 @@ def setup_logging():
     # Configure logging
     logging.basicConfig(
         level=logging.INFO,
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        format="%(message)s",
         handlers=[
-            logging.FileHandler("logs/neuralroulette.log"),
+            logging.FileHandler("logs/roulette.log"),
             logging.StreamHandler()
         ]
     )

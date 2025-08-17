@@ -30,7 +30,7 @@ class RouletteWebSocketClient:
         try:
             self.websocket = await websockets.connect(self.ws_url)
             self.connected = True
-            self.logger.info(f"Connected to WebSocket at {self.ws_url}")
+            # self.logger.info(f"Connected to WebSocket at {self.ws_url}")
             
             # Send initial connection message
             await self.send_connection_message()
@@ -53,7 +53,7 @@ class RouletteWebSocketClient:
             "key": [self.table_id],
             "currency": self.currency
         }
-        self.logger.info(f"Sending connection message: {connection_msg}")
+        # self.logger.info(f"Sending connection message: {connection_msg}")
         await self.websocket.send(json.dumps(connection_msg))
         
     async def start_ping(self):
@@ -81,7 +81,7 @@ class RouletteWebSocketClient:
                 message = await self.websocket.recv()
                 await self.process_message(message)
         except websockets.exceptions.ConnectionClosed:
-            self.logger.info("WebSocket connection closed")
+            # self.logger.info("WebSocket connection closed")
             self.connected = False
         except Exception as e:
             self.logger.error(f"Error in WebSocket listener: {str(e)}")
@@ -110,15 +110,15 @@ class RouletteWebSocketClient:
                         roulette_number = int(latest_result["result"])
                         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                         
-                        self.logger.info(f"Received roulette number: {roulette_number}")
+                        # self.logger.info(f"Received roulette number: {roulette_number}")
                         
                         # Call all registered callbacks with the new number
                         for callback in self.callbacks:
                             await callback(roulette_number)
                             
                         # Log the number to file
-                        with open("roulette_log.txt", "a") as log_file:
-                            log_file.write(f"{timestamp}: {roulette_number}\n")
+                        # with open("roulette_log.txt", "a") as log_file:
+                        #     log_file.write(f"{timestamp}: {roulette_number}\n")
                     except ValueError:
                         self.logger.error(f"Invalid roulette number format: {latest_result['result']}")
             # Fallback to the original format
@@ -126,15 +126,15 @@ class RouletteWebSocketClient:
                 roulette_number = int(data["result"]["number"])
                 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 
-                self.logger.info(f"Received roulette number: {roulette_number}")
+                # self.logger.info(f"Received roulette number: {roulette_number}")
                 
                 # Call all registered callbacks with the new number
                 for callback in self.callbacks:
                     await callback(roulette_number)
                     
                 # Log the number to file
-                with open("roulette_log.txt", "a") as log_file:
-                    log_file.write(f"{timestamp}: {roulette_number}\n")
+                # with open("roulette_log.txt", "a") as log_file:
+                #     log_file.write(f"{timestamp}: {roulette_number}\n")
             # else:
                 # self.logger.info(f"Unrecognized message format, no roulette number found")
                     
@@ -149,7 +149,7 @@ class RouletteWebSocketClient:
         if self.connected and self.websocket:
             await self.websocket.close()
             self.connected = False
-            self.logger.info("WebSocket connection closed")
+            # self.logger.info("WebSocket connection closed")
 
     async def simulate_data(self):
         """Simulate roulette data for testing purposes"""

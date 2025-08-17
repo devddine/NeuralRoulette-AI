@@ -32,7 +32,7 @@ class StrategyManager:
             
             # Create an instance of the strategy
             self.strategy = strategy_class(balance=self.balance, auto_train=self.auto_train)
-            self.logger.info(f"Loaded strategy: {self.strategy_name}")
+            # self.logger.info(f"Loaded strategy: {self.strategy_name}")
             return True
         except (ImportError, AttributeError) as e:
             self.logger.error(f"Failed to load strategy '{self.strategy_name}': {str(e)}")
@@ -66,10 +66,14 @@ class StrategyManager:
             
             self.strategy.total_spins += 1
             
-            # Display results
+            # Calculate statistics
             win_rate = (self.strategy.correct_predictions / self.strategy.total_spins) * 100
             roi = ((self.strategy.balance - self.balance) / self.balance) * 100
             
+            # Log results in a single line format
+            self.logger.info(f"Number: {number}, Balance: ${self.strategy.balance:.2f}, Win Rate: {win_rate:.2f}%, ROI: {roi:.2f}%")
+            
+            # Display results
             print(f"\n🎲 Spin #{self.strategy.total_spins}")
             print(f"🎯 Result: {number} ({self.strategy.get_color(number)})")
             print(f"🔮 Predicted: {', '.join(str(n) for n in predicted_numbers)}")
@@ -108,5 +112,8 @@ class StrategyManager:
             if self.strategy.balance <= 0:
                 print("❌ Balance depleted. Stopping strategy.")
                 return False
+        else:
+            # Not enough history yet
+            print(f"📊 Not enough history yet ({len(self.strategy.game_history)}/{self.strategy.sequence_length}) - please wait, receiving numbers...")
         
         return True
