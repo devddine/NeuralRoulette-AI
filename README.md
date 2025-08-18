@@ -238,4 +238,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-<div align="center"><sub>Built with ❤️ by [devddine](https://github.com/devddine)</sub></div>
+<div align="center"><sub>
+
+Built with ❤️ by [devddine](https://github.com/devddine)</sub></div>
