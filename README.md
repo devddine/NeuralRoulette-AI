@@ -1,14 +1,51 @@
-# NeuralRoulette-AI - AI Roulette Number Generator 🎰
+<h1 align="center">
+  <br>
+  <a href="https://github.com/devddine/NeuralRoulette-AI"><img src="assets/logo.svg" alt="NeuralRoulette AI" width="200"></a>
+  <br>
+  NeuralRoulette AI
+  <br>
+</h1>
 
-An advanced machine learning system for predicting roulette outcomes using LSTM neural networks with real-time data from Pragmatic Play Live Casino.
+<h4 align="center">An advanced machine learning system for predicting roulette outcomes using LSTM</a>.</h4>
 
-## 🎯 Project Overview
+<p align="center">
+  <a href="https://github.com/devddine/NeuralRoulette-AI/issues">
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/devddine/NeuralRoulette-AI?style=plastic">
+  </a>  
+  <a href="https://github.com/devddine/NeuralRoulette-AI/pulls">
+    <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/devddine/NeuralRoulette-AI?style=plastic">
+  </a>
+  <a href="https://discord.gg/UPyggZ2cK8">
+    <img alt="Discord" src="https://img.shields.io/discord/827945236218904627?style=plastic&label=discord">
+  </a>
+  <a href="https://github.com/devddine/NeuralRoulette-AI/graphs/contributors">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/devddine/NeuralRoulette-AI?style=plastic">
+  </a>
+  <a href="https://github.com/sponsors/devddine">
+    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/devddine?style=plastic">
+  </a>
+</p>
 
-NeuralRoulette-AI is a sophisticated roulette prediction system that leverages deep learning to analyze historical roulette spin data and predict future outcomes. The system uses multiple prediction strategies with varying risk levels to provide comprehensive betting insights.
+<p align="center">
+  <a href="#🎯-project-overview">Project Overview</a> •
+  <a href="#🚀-quick-start">Quick Start</a> •
+  <a href="#🔧-configuration">Configuration</a> •
+  <a href="#🎮-usage-examples">Usage Examples</a> •
+  <a href="#🤝-contributing">Contributing</a> •
+  <a href="#📄-license">License</a>
+</p>
+
+<p align="center">
+  <img src="assets/image.png" alt="NeuralRoulette AI Demo">
+</p>
 
 ## ⚠️ Disclaimer
 
 **Important**: This system is for educational and entertainment purposes only. Roulette is a game of chance with inherent house edge. No prediction system can guarantee wins. Always gamble responsibly and within your means.
+
+## 🎯 Project Overview
+
+NeuralRoulette-AI is a sophisticated roulette prediction system that leverages deep learning to analyze historical roulette spin data and predict future outcomes. The system uses multiple prediction strategies with varying risk levels to provide comprehensive betting insights.
 
 ### Key Features
 - **Real-time Data**: Live WebSocket connection to Pragmatic Play Live Casino
@@ -189,13 +226,6 @@ TOP18 - Top-18 Numbers
 
 Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
 
-### Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -206,11 +236,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - TensorFlow team for the excellent ML framework
 - WebSocket community for real-time communication tools
 
-## 📞 Support
+---
 
-For questions, issues, or contributions, please open an issue on GitHub
-
-## 🌐 Community
-
-Join our Discord server for discussions, updates, and support:
-**[<Code /> Discord Server](https://discord.gg/UPyggZ2cK8)**
+<div align="center"><sub>Built with ❤️ by [devddine](https://github.com/devddine)</sub></div>
