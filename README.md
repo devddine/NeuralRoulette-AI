@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  <a href="#🎯-project-overview">Project Overview</a> •
+  <a href="#project-overview">Project Overview</a> •
   <a href="#🚀-quick-start">Quick Start</a> •
   <a href="#🔧-configuration">Configuration</a> •
   <a href="#🎮-usage-examples">Usage Examples</a> •
