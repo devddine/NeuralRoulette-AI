@@ -43,7 +43,7 @@
 
 **Important**: This system is for educational and entertainment purposes only. Roulette is a game of chance with inherent house edge. No prediction system can guarantee wins. Always gamble responsibly and within your means.
 
-## 🎯 Project Overview
+## Project Overview
 
 NeuralRoulette-AI is a sophisticated roulette prediction system that leverages deep learning to analyze historical roulette spin data and predict future outcomes. The system uses multiple prediction strategies with varying risk levels to provide comprehensive betting insights.
 
